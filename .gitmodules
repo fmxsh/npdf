@@ -1,0 +1,42 @@
+[submodule "plugins/sources/local/bubblecol.nvim"]
+	path = plugins/sources/local/bubblecol.nvim
+	url = git@github.com-fmxsh:fmxsh/bubblecol.nvim
+[submodule "plugins/sources/local/color-theme.nvim"]
+	path = plugins/sources/local/color-theme.nvim
+	url = git@github.com-fmxsh:fmxsh/color-theme.nvim
+[submodule "plugins/sources/local/ctxterm.nvim"]
+	path = plugins/sources/local/ctxterm.nvim
+	url = git@github.com-fmxsh:fmxsh/ctxterm.nvim
+[submodule "plugins/sources/local/devenv.nvim"]
+	path = plugins/sources/local/devenv.nvim
+	url = git@github.com-fmxsh:fmxsh/devenv.nvim
+[submodule "plugins/sources/local/dynkey.nvim"]
+	path = plugins/sources/local/dynkey.nvim
+	url = git@github.com-fmxsh:fmxsh/dynkey.nvim
+[submodule "plugins/sources/local/f3c-syntax-hl.nvim"]
+	path = plugins/sources/local/f3c-syntax-hl.nvim
+	url = git@github.com-fmxsh:fmxsh/f3c-syntax-hl.nvim
+[submodule "plugins/sources/local/fixedspace.nvim"]
+	path = plugins/sources/local/fixedspace.nvim
+	url = git@github.com-fmxsh:fmxsh/fixedspace.nvim
+[submodule "plugins/sources/local/funview.nvim"]
+	path = plugins/sources/local/funview.nvim
+	url = git@github.com-fmxsh:fmxsh/funview.nvim
+[submodule "plugins/sources/local/greatinit.nvim"]
+	path = plugins/sources/local/greatinit.nvim
+	url = git@github.com-fmxsh:fmxsh/greatinit.nvim
+[submodule "plugins/sources/local/keypoint.nvim"]
+	path = plugins/sources/local/keypoint.nvim
+	url = git@github.com-fmxsh:fmxsh/keypoint.nvim
+[submodule "plugins/sources/local/mdtoc.nvim"]
+	path = plugins/sources/local/mdtoc.nvim
+	url = git@github.com-fmxsh:fmxsh/mdtoc.nvim
+[submodule "plugins/sources/local/permtermbuf.nvim"]
+	path = plugins/sources/local/permtermbuf.nvim
+	url = git@github.com-fmxsh:fmxsh/permtermbuf.nvim
+[submodule "plugins/sources/local/phxm.nvim"]
+	path = plugins/sources/local/phxm.nvim
+	url = git@github.com-fmxsh:fmxsh/phxm.nvim
+[submodule "plugins/sources/local/wswrite.nvim"]
+	path = plugins/sources/local/wswrite.nvim
+	url = git@github.com-fmxsh:fmxsh/wswrite.nvim
