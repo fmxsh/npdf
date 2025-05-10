@@ -40,3 +40,6 @@
 [submodule "plugins/sources/local/wswrite.nvim"]
 	path = plugins/sources/local/wswrite.nvim
 	url = git@github.com-fmxsh:fmxsh/wswrite.nvim
+[submodule "plugins/sources/local/gitwatch.nvim"]
+	path = plugins/sources/local/gitwatch.nvim
+	url = git@github.com-fmxsh:fmxsh/gitwatch.nvim
