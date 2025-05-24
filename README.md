@@ -82,7 +82,7 @@ System files of this base-config system.
 
 ## Helper scripts
 
-Here's a concise description you can use in your README under a **Helper Scripts** section:
+Helper scripts exist to help this base repo and the submodules in iteraction with GitHub. It facilitates easy update of the base and sub modules.
 
 ### `check-untracked-submodules.sh`
 
