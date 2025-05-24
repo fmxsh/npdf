@@ -6,16 +6,17 @@ cd "$(git rev-parse --show-toplevel)"
 
 # 1. Check if working tree has changes (tracked or untracked)
 if [[ -n $(git status --porcelain) ]]; then
-    echo "⚠️ Base repo has changes:"
-    git status --short
-    read -rp "Stage and commit base repo changes? [y/N] " confirm
-    if [[ $confirm =~ ^[Yy]$ ]]; then
-        git add .
-        read -rp "Enter commit message: " msg
-        git commit -m "${msg:-"Sync base repo changes"}"
-    fi
+	echo "⚠️ Base repo has changes:"
+	git status --short
+	read -rp "Stage and commit base repo changes? [y/N] " confirm
+	if [[ $confirm =~ ^[Yy]$ ]]; then
+		git add -A
+		read -rp "Enter commit message: " msg
+		git commit -m "${msg:-"Sync base repo changes"}"
+	fi
+
 else
-    echo "✅ Base repo is clean."
+	echo "✅ Base repo is clean."
 fi
 
 echo ""
@@ -42,9 +43,8 @@ echo ""
 echo "⬆️  Final base repo push?"
 read -rp "Push base repo now? [y/N] " push_confirm
 if [[ $push_confirm =~ ^[Yy]$ ]]; then
-    git push
-    echo "✅ All pushed."
+	git push
+	echo "✅ All pushed."
 else
-    echo "❗ Remember to push later: git push"
+	echo "❗ Remember to push later: git push"
 fi
-
