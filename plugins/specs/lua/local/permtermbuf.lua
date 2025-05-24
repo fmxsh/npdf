@@ -108,6 +108,28 @@ return {
 				buffer_name = "neomutt",
 			},
 			{
+				name = "nntm",
+				cmd = "nntm -s /tmp/nntm-stream",
+				buffer_name = "nntmx",
+				auto_start = true,
+
+				-- NOTE: Didn't need this, permtermbuf not setting vim.cmd("stopinsert") caused trouble in toggling quickly
+				-- Now permtermbuf does stopinsert when toggling away from the terminal
+				--		setup_func = function()
+				--			-- somewhere after permtermbuf has been `require`d and configured
+				--			vim.api.nvim_create_autocmd("User", {
+				--				pattern = "phxmPostLoaded",
+				--				once = true, -- run only the first time the event fires
+				--				callback = function()
+				--					local perm = require("permtermbuf")
+				--					perm.nntm.toggle() -- open
+				--					perm.nntm.toggle() -- close (leaves job running, UI restored)
+				--				end,
+				--			})
+				--		end,
+			},
+
+			{
 				name = "lazygit",
 				cmd = "lazygit --path %git_dir%",
 				buffer_name = "lazygit",

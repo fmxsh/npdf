@@ -464,6 +464,25 @@ return {
 			'<CMD>lua require("permtermbuf").neomutt.toggle()<CR>',
 			{ noremap = true, silent = true }
 		)
+		-- Toggle nntm
+		vim.keymap.set(
+			"n",
+			"<A-n>",
+			'<CMD>lua require("permtermbuf").nntm.toggle()<CR>',
+			{ noremap = true, silent = true }
+		)
+		vim.keymap.set(
+			"t",
+			"<A-n>",
+			'<CMD>lua require("permtermbuf").nntm.toggle()<CR>',
+			{ noremap = true, silent = true }
+		)
+		vim.keymap.set(
+			"i",
+			"<A-n>",
+			'<CMD>lua require("permtermbuf").nntm.toggle()<CR>',
+			{ noremap = true, silent = true }
+		)
 
 		-- Toggle Lazygit
 		vim.keymap.set(

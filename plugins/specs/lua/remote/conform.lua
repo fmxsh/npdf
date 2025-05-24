@@ -29,7 +29,6 @@ return {
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				bash = { "shfmt" },
-				zsh = { "shfmt" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				html = { "prettier" },
@@ -37,6 +36,24 @@ return {
 				json = { "prettier" },
 				markdown = { "prettier" },
 				yaml = { "prettier" },
+				c = { "clang_format" },
+			},
+			formatters = {
+				clang_format = {
+					command = "clang-format",
+					args = {
+						[[--style={
+				BasedOnStyle: llvm,
+				BreakBeforeBraces: Allman,
+				AlignAfterOpenBracket: Align,
+				AlignConsecutiveAssignments: true,
+				AlignTrailingComments: true,
+				IndentWidth: 6,
+				SpacesInParentheses: true,
+				SpacesInSquareBrackets: true
+			}]],
+					},
+				},
 			},
 		})
 
