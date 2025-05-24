@@ -80,6 +80,49 @@ Say, _Tree-sitter_ is a popular plugin and if used, its configuration specificat
 
 System files of this base-config system.
 
+## Helper scripts
+
+Here's a concise description you can use in your README under a **Helper Scripts** section:
+
+### `check-untracked-submodules.sh`
+
+Verifies that all plugin directories in `plugins/sources/local/` that are Git repositories are properly registered in the project's `.gitmodules` file.
+This ensures no submodules are missing from the base repo's tracking.
+
+- ✅ Passes if all submodules are correctly tracked
+- ❌ Fails and lists any untracked submodules (e.g. newly added or reinitialized ones)
+
+Useful before committing or pushing the main repo.
+
+Run it from the root dir, which is `./src./../` or simply `./`, and it will check all submodules in `./plugins/sources/local/`.
+
+**Usage:**
+
+```bash
+./src/check-untracked-submodules.sh
+```
+
+### `./src/sync-all`
+
+Interactive script to check, commit, and push changes in both the base Git repository and all tracked submodules.
+
+- 🔍 Checks for uncommitted or untracked changes in the base repo
+- 🔁 Iterates through each submodule, showing status and prompting for commit + push
+- 🧠 Safe: prompts before every commit and push
+- ✅ Ensures everything is in sync before deployment or backup
+
+Use this as a manual sync assistant to avoid forgetting submodule commits or base updates.
+
+**Submodule Push Guard**: The sync-all.sh script includes a safety guard that prevents the main repository from being pushed if any submodule has local commits that haven't been pushed to its remote. This ensures the base repo never references submodule commits that don't exist on GitHub, which would otherwise break clone and update operations. The script does not automatically push submodules — it prompts the user to manually complete the push, maintaining explicit control over submodule state and commit intent.
+
+**Usage:**
+
+```bash
+./src/sync-all.sh
+```
+
+Run it from the root dir, which is `./src./../` or simply `./`, and it will check the base repo which is `./` and all submodules in `./plugins/sources/local/`.
+
 ## History
 
 My config started with [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and I slowly but completely moved away from it making the config my own. There is almost nothing remaining of kickstart.nvim.

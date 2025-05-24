@@ -7,8 +7,8 @@ GITMODULES_FILE=".gitmodules"
 
 # Ensure we're in a Git repo
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    echo "❌ Not a Git repository"
-    exit 1
+	echo "❌ Not a Git repository"
+	exit 1
 fi
 
 # Gather all git-tracked submodule paths from .gitmodules
@@ -16,9 +16,9 @@ tracked=$(grep 'path = ' "$GITMODULES_FILE" 2>/dev/null | awk '{print $3}' | sor
 
 # Find all dirs with their own .git folder (i.e. submodules)
 found=$(find "$SUBMODULE_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r d; do
-    if [ -d "$d/.git" ] || [ -f "$d/.git" ]; then
-        echo "$d"
-    fi
+	if [ -d "$d/.git" ] || [ -f "$d/.git" ]; then
+		echo "$d"
+	fi
 done | sort)
 
 # Normalize both lists to relative paths
@@ -29,11 +29,10 @@ found_rel=$(echo "$found" | sed 's|^\./||')
 untracked=$(comm -13 <(echo "$tracked_rel") <(echo "$found_rel"))
 
 if [ -n "$untracked" ]; then
-    echo "❌ Untracked submodules found:"
-    echo "$untracked"
-    exit 1
+	echo "❌ Untracked submodules found:"
+	echo "$untracked"
+	exit 1
 else
-    echo "✅ All submodules are properly tracked in .gitmodules"
-    exit 0
+	echo "✅ All submodules are properly tracked in .gitmodules"
+	exit 0
 fi
-
