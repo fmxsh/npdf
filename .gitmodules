@@ -43,3 +43,6 @@
 [submodule "plugins/sources/local/gitwatch.nvim"]
 	path = plugins/sources/local/gitwatch.nvim
 	url = git@github.com-fmxsh:fmxsh/gitwatch.nvim
+[submodule "plugins/sources/local/nntmwrite.nvim"]
+	path = plugins/sources/local/nntmwrite.nvim
+	url = git@github.com-fmxsh:fmxsh/nntmwrite.nvim
