@@ -109,7 +109,7 @@ return {
 			},
 			{
 				name = "nntm",
-				cmd = "nntm -s /tmp/nntm-stream",
+				cmd = "nntm /tmp/nntm-stream",
 				buffer_name = "nntmx",
 				auto_start = true,
 
