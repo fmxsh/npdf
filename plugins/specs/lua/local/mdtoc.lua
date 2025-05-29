@@ -50,7 +50,6 @@ return {
 					require("mdtoc").start()
 					require("mdtoc").update_scratch_buffer()
 				end, 1)
-				require("wswrite").log("mdtoc loaded")
 			end,
 		})
 
