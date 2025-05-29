@@ -1,5 +1,7 @@
 # NPDF - Neovim Plugin Development Framework
 
+Note: This repo name is named `npdf` because its a framework for neovim config and plugin development. On your local machine, name this root directory whatever you want, such as `nvim`.
+
 _NPDF_ is a modular Neovim configuration framework that uses the Lazy plugin manager. It is specifically built to support a plugin development environment.
 
 All actively developed plugins are placed in a dedicated directory (local), while third-party plugins reside in a separate directory (remote).
